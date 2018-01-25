@@ -101,7 +101,7 @@
         distYS = distY * distY;
         distanceWithBlast = distXS + distYS;
         force = 100000 / distanceWithBlast;
-        if (force > 50) force = 50;
+        // if (force > 50) force = 50;
         rad = Math.asin(distYS / distanceWithBlast);
         forceY = Math.sin(rad) * force * (distY < 0 ? -1 : 1);
         forceX = Math.cos(rad) * force * (distX < 0 ? -1 : 1);
