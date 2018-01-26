@@ -66,7 +66,7 @@
       this.elem = elem;
       this.style = elem.style;
       this.elem.style['zIndex'] = 9999;
-      this.elem.style['fontFamily'] = "Comic Sans MS";
+      // this.elem.style['fontFamily'] = "Comic Sans MS";
       this.transformX = 0;
       this.transformY = 0;
       this.transformRotation = 0;
@@ -139,7 +139,7 @@
       };
       this.body = document.getElementsByTagName("body")[0];
       this.state = 'planted';
-      this.count = 3;
+      this.count = 1;
       this.drop();
     }
 
