@@ -66,6 +66,7 @@
       this.elem = elem;
       this.style = elem.style;
       this.elem.style['zIndex'] = 9999;
+      this.elem.style['fontFamily'] = "Comic Sans MS";
       this.transformX = 0;
       this.transformY = 0;
       this.transformRotation = 0;
@@ -101,7 +102,6 @@
         distYS = distY * distY;
         distanceWithBlast = distXS + distYS;
         force = 2500000 / distanceWithBlast;
-        // if (force > 50) force = 50;
         rad = Math.asin(distYS / distanceWithBlast);
         forceY = Math.sin(rad) * force * (distY < 0 ? -1 : 1);
         forceX = Math.cos(rad) * force * (distX < 0 ? -1 : 1);
