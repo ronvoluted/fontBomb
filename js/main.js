@@ -202,11 +202,10 @@
     function Explosion() {
       this.tick = __bind(this.tick, this);
       this.dropBomb = __bind(this.dropBomb, this);
-      var char, confirmation, style, _ref2,
+      var char, style, _ref2,
         _this = this;
       if (window.FONTBOMB_LOADED) return;
       window.FONTBOMB_LOADED = true;
-      if (!window.FONTBOMB_HIDE_CONFIRMATION) confirmation = true;
       this.bombs = [];
       this.body = document.getElementsByTagName("body")[0];
       if ((_ref2 = this.body) != null) {
