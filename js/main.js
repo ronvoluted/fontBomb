@@ -108,8 +108,8 @@
         // forceY = Math.sin(rad) * force * (distY < 0 ? -1 : 1);
         // forceX = Math.cos(rad) * force * (distX < 0 ? -1 : 1);
         var angle = Math.atan2(dy, dx);
-        forceY = Math.sin(angle) * force;
-        forceX = Math.cos(angle) * force;
+        forceY = Math.sin(angle) * force * (distY < 0 ? -1 : 1);
+        forceX = Math.cos(angle) * force * (distY < 0 ? -1 : 1);
         this.velocityX = +forceX;
         this.velocityY = +forceY;
       }
