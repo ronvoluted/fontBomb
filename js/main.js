@@ -108,13 +108,15 @@
         // forceY = Math.sin(rad) * force * (distY < 0 ? -1 : 1);
         // forceX = Math.cos(rad) * force * (distX < 0 ? -1 : 1);
         var angle = Math.atan2(dy, dx);
-        forceY = Math.sin(angle);
-        forceX = Math.cos(angle);
+        forceY = Math.sin(angle) * force;
+        forceX = Math.cos(angle) * force;
         this.velocityX = forceX;
         this.velocityY = forceY;
       }
-      this.transformX = this.transformX + this.velocityX;
-      this.transformY = this.transformY + this.velocityY;
+      //this.transformX = this.transformX + this.velocityX;
+      //this.transformY = this.transformY + this.velocityY;
+      this.transformX = blast.x;
+      this.transformY = blast.y;
       this.transformRotation = this.transformX * -1;
       if ((Math.abs(previousStateX - this.transformX) > 1 || Math.abs(previousStateY - this.transformY) > 1 || Math.abs(previousRotation - this.transformRotation) > 1) && ((this.transformX > 1 || this.transformX < -1) || (this.transformY > 1 || this.transformY < -1))) {
         transform = "translate(" + this.transformX + "px, " + this.transformY + "px) rotate(" + this.transformRotation + "deg)";
