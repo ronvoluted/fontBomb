@@ -116,14 +116,14 @@
       this.transformX = this.transformX + this.velocityX;
       this.transformY = this.transformY + this.velocityY;
       this.transformRotation = this.transformX * -1;
-      if ((Math.abs(previousStateX - this.transformX) > 1 || Math.abs(previousStateY - this.transformY) > 1 || Math.abs(previousRotation - this.transformRotation) > 1) && ((this.transformX > 1 || this.transformX < -1) || (this.transformY > 1 || this.transformY < -1))) {
+      //if ((Math.abs(previousStateX - this.transformX) > 1 || Math.abs(previousStateY - this.transformY) > 1 || Math.abs(previousRotation - this.transformRotation) > 1) && ((this.transformX > 1 || this.transformX < -1) || (this.transformY > 1 || this.transformY < -1))) {
         transform = "translate(" + bomb.x + "px, " + bomb.y + "px) rotate(" + this.transformRotation + "deg)";
         this.style['MozTransform'] = transform;
         this.style['OTransform'] = transform;
         this.style['WebkitTransform'] = transform;
         this.style['msTransform'] = transform;
         return this.style['transform'] = transform;
-      }
+      //}
     };
 
     return Particle;
