@@ -96,8 +96,10 @@
         this.velocityY = 0;
       }
       if (blast != null) {
-        distX = this.offsetLeft + this.transformX - blast.x;
-        distY = this.offsetTop + this.transformY - blast.y;
+        //distX = this.offsetLeft + this.transformX - blast.x;
+        //distY = this.offsetTop + this.transformY - blast.y;
+        distX = this.offsetLeft + blast.x - this.transformX;
+        distY = this.offsetTop + blast.y - this.transformY;
         distXS = distX * distX;
         distYS = distY * distY;
         distanceWithBlast = distXS + distYS;
